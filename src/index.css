@@ -1,1 +1,99 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: #05081f;
+  --color-background-gradient: #2a3e84;
+
+  /* Break Points
+
+  --bp-mdm: 844px;
+  --bp-lg: 1024px; */
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--color-background);
+  color: white;
+  padding-left: 28px;
+  padding-top: 40px;
+  position: relative;
+}
+
+h1 {
+  font-size: 33px;
+  width: 263px;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+.subHeading {
+  font-size: 11px;
+  font-weight: 200;
+  line-height: 15px;
+  /* letter-spacing: -0.2px; */
+  opacity: 0.65;
+  width: 297px;
+  margin-top: 9px;
+}
+
+.bgGradient {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 356px;
+  background-color: var(--color-background-gradient);
+  border-radius: 999999px;
+  z-index: -1;
+  top: -120px;
+  left: -152px;
+  filter: blur(175px);
+}
+
+@media (min-width: 844px) {
+  h1 {
+    font-size: 42px;
+    width: 460px;
+    line-height: 42px;
+  }
+
+  .subHeading {
+    font-size: 12px;
+    width: 424px;
+    margin-top: 11px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 50px;
+    width: 537px;
+    line-height: 49px;
+  }
+
+  .subHeading {
+    font-size: 13px;
+    width: 476px;
+    margin-top: 15px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1512px) {
+  h1 {
+    font-size: 59px;
+    width: 646px;
+    line-height: 59px;
+  }
+}
