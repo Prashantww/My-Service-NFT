@@ -1,4 +1,5 @@
 import React from "react";
+import HeroButton from "./components/HeroButton";
 
 const App = () => {
   return (
@@ -12,6 +13,17 @@ const App = () => {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco.
       </p>
+      <div className="flex gap-[24px] mt-[27px]">
+        <HeroButton toLink="#">Connect Wallet</HeroButton>
+        <HeroButton toLink="#" variant="primary-right">
+          Your Tickets
+        </HeroButton>
+      </div>
+      <div className="mt-[24px]">
+        <HeroButton toLink="#" variant="link">
+          Buy Tickets
+        </HeroButton>
+      </div>
     </>
   );
 };
