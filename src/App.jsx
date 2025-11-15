@@ -2,6 +2,7 @@ import React from "react";
 import HeroButton from "./components/HeroButton";
 import ProfileCard from "./components/ProfileCard";
 import CountdownTimer from "./components/CountdownTimer";
+import ProgressBar from "./components/ProgressBar";
 
 const App = () => {
   return (
@@ -50,6 +51,10 @@ const App = () => {
           timerLable={"Ticket Sales Close In"}
         ></CountdownTimer>
       </div>
+      <section className="lotteryDetails">
+        <h2 className="mb-[12px]">Lottery Details</h2>
+        <ProgressBar current={750} total={1000}></ProgressBar>
+      </section>
     </div>
   );
 };
