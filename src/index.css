@@ -89,7 +89,7 @@ h1 span {
   /* background-color: red; */
   position: absolute;
   z-index: -100;
-  top: 26%;
+  top: 216px;
   right: -16px;
 }
 
@@ -100,7 +100,8 @@ h1 span {
   gap: 10px;
 }
 
-.lotteryDetails {
+.lotteryDetails,
+.serviceProviderProfile {
   margin-top: 36px;
 }
 
@@ -129,7 +130,7 @@ h2 {
   }
 
   .clockImage {
-    top: 1%;
+    top: 38px;
     right: -92px;
   }
 
@@ -161,7 +162,7 @@ h2 {
 
   .clockImage {
     height: 563px;
-    top: 4%;
+    top: 47px;
     right: -77px;
   }
 }
@@ -169,7 +170,7 @@ h2 {
 @media (min-width: 1280px) {
   .clockImage {
     height: 768px;
-    top: -2%;
+    top: -37px;
     right: -104px;
   }
 }
@@ -183,7 +184,7 @@ h2 {
 
   .clockImage {
     height: 820px;
-    top: -6%;
+    top: -67px;
     right: -135px;
   }
 }

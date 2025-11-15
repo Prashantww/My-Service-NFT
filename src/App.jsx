@@ -3,8 +3,27 @@ import HeroButton from "./components/HeroButton";
 import ProfileCard from "./components/ProfileCard";
 import CountdownTimer from "./components/CountdownTimer";
 import ProgressBar from "./components/ProgressBar";
+import ServiceCard from "./components/ServiceCard";
 
 const App = () => {
+  const serviceData = [
+    {
+      imageUrl: "/serviceCards/Professional&Web3Services.png",
+      title: "Professional & Web3 Services",
+      subTitle: "Lorem ipsum dolor sit amet, consectetur aboris",
+    },
+    {
+      imageUrl: "/serviceCards/DR_AIDAN_WELLNECY.png",
+      title: "DR_AIDAN_WELLNECY",
+      subTitle: "Lorem ipsum dolor sit amet, consectetur aboris",
+    },
+    {
+      imageUrl: "/serviceCards/Personal&Domestic.png",
+      title: "Personal & Domestic",
+      subTitle: "Lorem ipsum dolor sit amet, consectetur aboris",
+    },
+  ];
+
   return (
     <div className="pageWrapper">
       <div className="bgGradientBlob blob1"></div>
@@ -54,6 +73,20 @@ const App = () => {
       <section className="lotteryDetails">
         <h2 className="mb-[12px]">Lottery Details</h2>
         <ProgressBar current={750} total={1000}></ProgressBar>
+      </section>
+      <section className="serviceProviderProfile">
+        <h2>Service Provider Profile</h2>
+
+        <div className="serviceCardsWrapper">
+          {serviceData.map((item, index) => (
+            <ServiceCard
+              key={index}
+              title={item.title}
+              subtitle={item.subTitle}
+              image={item.imageUrl}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );
