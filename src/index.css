@@ -4,6 +4,7 @@
   /* margin: 0;
   padding: 0; */
   box-sizing: border-box;
+  object-fit: cover;
 }
 
 :root {
@@ -20,9 +21,19 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: var(--color-background);
   color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.pageWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   padding-left: 28px;
   padding-top: 40px;
-  position: relative;
+  /* background-color: red; */
+
+  overflow: hidden;
 }
 
 .profileAndCountdown {
@@ -50,28 +61,79 @@ h1 span {
   margin-top: 9px;
 }
 
-.bgGradient {
+.bgGradientBlob {
   position: absolute;
   aspect-ratio: 1/1;
   width: 356px;
   background-color: var(--color-background-gradient);
   border-radius: 999999px;
   z-index: -1;
-  top: -120px;
-  left: -152px;
+
   filter: blur(175px);
 }
 
-@media (min-width: 844px) {
+.blob1 {
+  top: -120px;
+  left: -152px;
+}
+
+.blob2 {
+  top: 490px;
+  right: -240px;
+}
+
+.clockImage {
+  aspect-ratio: initial;
+  /* width: 607.51px; */
+  height: 490px;
+  /* background-color: red; */
+  position: absolute;
+  z-index: -100;
+  top: 26%;
+  right: -16px;
+}
+
+.profileAndCountdownMobile {
+  margin-top: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 724px) {
   .profileAndCountdown {
     display: flex;
   }
 
   h1 {
+    font-size: 36px;
+    width: 389px;
+    line-height: 36px;
+    margin-top: 40px;
+  }
+
+  .subHeading {
+    font-size: 13px;
+    width: 476px;
+    margin-top: 15px;
+    line-height: 19px;
+  }
+
+  .clockImage {
+    top: 1%;
+    right: -92px;
+  }
+
+  .profileAndCountdownMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 844px) {
+  h1 {
     font-size: 42px;
     width: 460px;
     line-height: 42px;
-    margin-top: 40px;
   }
 
   .subHeading {
@@ -88,15 +150,19 @@ h1 span {
     line-height: 49px;
   }
 
-  .subHeading {
-    font-size: 13px;
-    width: 476px;
-    margin-top: 15px;
-    line-height: 19px;
+  .clockImage {
+    height: 563px;
+    top: 4%;
+    right: -77px;
   }
 }
 
 @media (min-width: 1280px) {
+  .clockImage {
+    height: 768px;
+    top: -2%;
+    right: -104px;
+  }
 }
 
 @media (min-width: 1512px) {
@@ -104,5 +170,11 @@ h1 span {
     font-size: 59px;
     width: 646px;
     line-height: 59px;
+  }
+
+  .clockImage {
+    height: 820px;
+    top: -6%;
+    right: -135px;
   }
 }

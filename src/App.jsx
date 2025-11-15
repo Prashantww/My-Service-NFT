@@ -5,8 +5,9 @@ import CountdownTimer from "./components/CountdownTimer";
 
 const App = () => {
   return (
-    <>
-      <div className="bgGradient"></div>
+    <div className="pageWrapper">
+      <div className="bgGradientBlob blob1"></div>
+      <div className="bgGradientBlob blob2"></div>
       <div className="profileAndCountdown flex w-[86vw] justify-between">
         <ProfileCard
           userImage={"/dummyProfile.png"}
@@ -37,7 +38,19 @@ const App = () => {
           Buy Tickets
         </HeroButton>
       </div>
-    </>
+      <img className="clockImage" src="/clockImage.png" alt="" />
+      <div className="profileAndCountdownMobile">
+        <ProfileCard
+          userImage={"/dummyProfile.png"}
+          userName={"Emerson Philips"}
+          units={3.2}
+        ></ProfileCard>
+        <CountdownTimer
+          timerValue={"02:10:52:37"}
+          timerLable={"Ticket Sales Close In"}
+        ></CountdownTimer>
+      </div>
+    </div>
   );
 };
 
