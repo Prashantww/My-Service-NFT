@@ -4,6 +4,7 @@ import ProfileCard from "./components/ProfileCard";
 import CountdownTimer from "./components/CountdownTimer";
 import ProgressBar from "./components/ProgressBar";
 import ServiceCard from "./components/ServiceCard";
+import Agreement from "./components/Agreement";
 
 const App = () => {
   const serviceData = [
@@ -87,6 +88,14 @@ const App = () => {
             />
           ))}
         </div>
+        <Agreement
+          documentName={"Master Service Agreement"}
+          policyList={[
+            "Schedule Limits Apply",
+            "Non-Transferable",
+            "Safety-First Policy",
+          ]}
+        ></Agreement>
       </section>
     </div>
   );
