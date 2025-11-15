@@ -25,6 +25,10 @@ body {
   position: relative;
 }
 
+.profileAndCountdown {
+  display: none;
+}
+
 h1 {
   font-size: 33px;
   width: 263px;
@@ -59,10 +63,15 @@ h1 span {
 }
 
 @media (min-width: 844px) {
+  .profileAndCountdown {
+    display: flex;
+  }
+
   h1 {
     font-size: 42px;
     width: 460px;
     line-height: 42px;
+    margin-top: 40px;
   }
 
   .subHeading {

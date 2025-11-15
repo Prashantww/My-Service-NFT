@@ -1,10 +1,23 @@
 import React from "react";
 import HeroButton from "./components/HeroButton";
+import ProfileCard from "./components/ProfileCard";
+import CountdownTimer from "./components/CountdownTimer";
 
 const App = () => {
   return (
     <>
       <div className="bgGradient"></div>
+      <div className="profileAndCountdown flex w-[86vw] justify-between">
+        <ProfileCard
+          userImage={"/dummyProfile.png"}
+          userName={"Emerson Philips"}
+          units={3.2}
+        ></ProfileCard>
+        <CountdownTimer
+          timerValue={"02:10:52:37"}
+          timerLable={"Ticket Sales Close In"}
+        ></CountdownTimer>
+      </div>
       <h1>
         <span>Win 10 Years of</span> Exclusive Time & Service
       </h1>
