@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   padding-left: 28px;
   padding-top: 40px;
+  padding-bottom: 40px;
   /* background-color: red; */
 
   overflow: hidden;
@@ -110,6 +111,13 @@ h2 {
   font-weight: 500;
 }
 
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 337px;
+  grid-template-rows: repeat(4, 196px);
+  gap: 20px;
+}
+
 @media (min-width: 724px) {
   .profileAndCountdown {
     display: flex;
@@ -136,6 +144,11 @@ h2 {
 
   .profileAndCountdownMobile {
     display: none;
+  }
+
+  .serviceGrid {
+    grid-template-columns: repeat(2, 337px);
+    grid-template-rows: repeat(2, 196px);
   }
 }
 
@@ -164,6 +177,29 @@ h2 {
     height: 563px;
     top: 47px;
     right: -77px;
+  }
+
+  .serviceGrid {
+    grid-template-columns: repeat(2, 405px);
+    grid-template-rows: 231px;
+    row-gap: 45px;
+    column-gap: 95px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1445px) {
+  .serviceGrid {
+    grid-template-columns: repeat(3, 337px);
+    grid-template-rows: 196px;
+    column-gap: 85px;
+  }
+}
+
+@media (min-width: 1446px) {
+  .serviceGrid {
+    grid-template-columns: repeat(3, 405px);
+    grid-template-rows: 231px;
+    column-gap: 70px;
   }
 }
 

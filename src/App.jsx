@@ -78,7 +78,7 @@ const App = () => {
       <section className="serviceProviderProfile">
         <h2>Service Provider Profile</h2>
 
-        <div className="serviceCardsWrapper">
+        <div className="serviceGrid mt-[40px]">
           {serviceData.map((item, index) => (
             <ServiceCard
               key={index}
@@ -87,15 +87,17 @@ const App = () => {
               image={item.imageUrl}
             />
           ))}
+          <div className="agreementWrapperMain">
+            <Agreement
+              documentName={"Master Service Agreement"}
+              policyList={[
+                "Schedule Limits Apply",
+                "Non-Transferable",
+                "Safety-First Policy",
+              ]}
+            ></Agreement>
+          </div>
         </div>
-        <Agreement
-          documentName={"Master Service Agreement"}
-          policyList={[
-            "Schedule Limits Apply",
-            "Non-Transferable",
-            "Safety-First Policy",
-          ]}
-        ></Agreement>
       </section>
     </div>
   );
